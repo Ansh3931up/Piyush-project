@@ -1,0 +1,102 @@
+/* General styles */
+body {
+    width: 320px;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input styles */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: 500;
+    color: #444;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+/* Button styles */
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button-primary {
+    background-color: #2196F3;
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: #1976D2;
+}
+
+.button-secondary {
+    background-color: #f5f5f5;
+    color: #444;
+    border: 1px solid #ddd;
+}
+
+.button-secondary:hover {
+    background-color: #eeeeee;
+}
+
+/* Status indicator */
+.status {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: none;
+}
+
+.status.success {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    display: block;
+}
+
+.status.error {
+    background-color: #FFEBEE;
+    color: #C62828;
+    display: block;
+}
+
+/* Loading spinner */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #2196F3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 

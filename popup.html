@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Area Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .button:hover {
+            background: #1976D2;
+        }
+        #status {
+            margin-top: 10px;
+            padding: 10px;
+            display: none;
+            border-radius: 4px;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Area Monitor Settings</h2>
+        
+        <div class="input-group">
+            <button id="selectArea" class="button">Select Screen Area</button>
+            <small>Click to select the area you want to monitor</small>
+        </div>
+
+        <div class="input-group">
+            <label for="threshold">Notification Threshold:</label>
+            <input type="number" 
+                   id="threshold" 
+                   placeholder="Enter threshold value"
+                   min="1">
+            <small>Notify when number increases by this amount</small>
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email for notifications:</label>
+            <input type="email" 
+                   id="email" 
+                   placeholder="your@email.com">
+        </div>
+
+        <div class="input-group">
+            <label for="interval">Check Interval (seconds):</label>
+            <input type="number" 
+                   id="interval" 
+                   placeholder="5"
+                   min="1"
+                   max="3600">
+            <small>How often to check for changes (1-3600 seconds)</small>
+        </div>
+
+        <div class="input-group">
+            <button id="save" class="button button-primary">
+                <span class="spinner" id="saveSpinner"></span>
+                <span id="saveText">Save Settings</span>
+            </button>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
